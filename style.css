@@ -617,17 +617,56 @@ img {
   overflow: hidden;
   border-radius: 28px;
   min-height: 320px;
+  height: 320px;
   box-shadow: var(--card-shadow);
 }
 
 .gallery-card.tall {
   min-height: 500px;
+  height: 500px;
 }
 
 .gallery-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Make the literasi (belajar) image match gallery card height and behavior */
+.literasi-card {
+  min-height: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: var(--card-shadow);
+}
+
+.literasi-card .site-image {
+  max-height: 100%;
+  width: auto;
+  object-fit: contain;
+  object-position: center;
+  background: #f4f7ff;
+}
+
+.selasa-card {
+  min-height: 320px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.selasa-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #f4f7ff;
 }
 
 .gallery-overlay {
@@ -846,5 +885,18 @@ img {
 
   .main-card img {
     height: 480px;
+  }
+}
+
+@media (max-width: 720px) {
+  .literasi-card,
+  .selasa-card {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 720px) {
+  .rabu-card {
+    min-height: 320px;
   }
 }
